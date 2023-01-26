@@ -3,14 +3,20 @@ package main
 import (
 	"flag"
 	"fmt"
+	"log"
+	"net/http"
+
+	"github.com/inc4/go-template/pkg/api"
 )
 
 func main() {
 	// Basic command-line flag parsing
-	exampleInt := flag.Int("n", 42, "help message for flag n")
+	port := flag.Int("port", 8080, "example message for port number")
 	exampleStr := flag.String("example", "foo", "help message")
 	flag.Parse()
 
-	fmt.Println("n", *exampleInt)
-	fmt.Println("example", *exampleStr)
+	fmt.Println("command-line:", *port, *exampleStr)
+
+	http.HandleFunc("/hello", api.HandleHello)
+	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%d", *port), nil))
 }
