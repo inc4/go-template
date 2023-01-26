@@ -8,5 +8,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - uses: golangci/golangci-lint-action@v3
+
+      - run: go version
+
       - name: Run linters
         run: make lint
