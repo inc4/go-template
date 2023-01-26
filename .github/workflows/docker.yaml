@@ -1,9 +1,9 @@
 name: Publish docker image
 
-on: push
-#  push:
-#    branches: main
-#    tags: v*
+on:
+  push:
+    branches: main
+    tags: v*
 
 jobs:
   publish:
