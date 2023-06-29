@@ -10,8 +10,10 @@ Directory structure is inspired by https://github.com/golang-standards/project-l
 
 ## Getting started
 
-- Review all files, if you haven't done it before
-- Remove examples, all readmes (this one needs to be rewritten)
+- Review all files if you haven't done so before.
+- Remove examples and all READMEs (this one needs to be rewritten).
+- Change 'example' and 'go-template' names everywhere, specifically in
+  workflows.
 
 ## Where to put the code
 
