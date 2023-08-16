@@ -12,6 +12,7 @@ linters:
     - prealloc
     - revive
     - unconvert
+    - whitespace
 linters-settings:
   depguard:
     rules:
